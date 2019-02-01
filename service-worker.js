@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/starwars_front-end-test.git/precache-manifest.89fedde829c7dce933c36e015f4215fc.js"
+  "/starwars_front-end-test/precache-manifest.428de872b98d06106628dcc5e779e073.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/starwars_front-end-test.git/index.html", {
+workbox.routing.registerNavigationRoute("/starwars_front-end-test/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
