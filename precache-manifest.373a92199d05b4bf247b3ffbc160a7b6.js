@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "3c444e2f90bceb95885c",
-    "url": "/starwars_front-end-test/static/css/main.4b66a482.chunk.css"
+    "revision": "24005e14e1bf15550460",
+    "url": "/starwars_front-end-test/static/css/main.9d136708.chunk.css"
   },
   {
-    "revision": "3c444e2f90bceb95885c",
-    "url": "/starwars_front-end-test/static/js/main.3c444e2f.chunk.js"
+    "revision": "24005e14e1bf15550460",
+    "url": "/starwars_front-end-test/static/js/main.24005e14.chunk.js"
   },
   {
     "revision": "f03e8ae863144a61c620",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/starwars_front-end-test/static/media/starwars.e2da85bc.jpg"
   },
   {
-    "revision": "3c6d5fcb0d0d60ad6d9831e7c9d3fd32",
+    "revision": "d570ab084f830daab40e9b2ba1719168",
     "url": "/starwars_front-end-test/index.html"
   }
 ];
