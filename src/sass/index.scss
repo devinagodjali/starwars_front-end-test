@@ -1,0 +1,229 @@
+%center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%full {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+$Dosis: 'Dosis',
+sans-serif;
+$Fira: 'Fira sans',
+sans-serif;
+$Jos: 'Josefin Sans',
+sans-serif;
+$Pom:'Pompiere',
+cursive;
+$break-small: 600px;
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    color: white;
+    height: 100%;
+    @extend %full;
+    background-image: url('../stars.png');
+}
+
+.App {
+    height: 100%;
+    background-repeat: repeat;
+    background-image: url('../stars.png');
+}
+
+//Loader//
+.logo {
+    position: fixed;
+    width: 60%;
+    height: auto;
+    @extend %center;
+}
+
+//Navbar//
+.navbar {
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.Text {
+    font-size: 8em;
+    background-image: url('../starwars.jpg');
+    background-clip: text;
+    background-size: 20%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: bgmove 90s linear infinite;
+    -webkit-animation: bgmove 90s linear infinite;
+}
+
+@keyframes bgmove {
+    0% {
+        background-position: 0% 30%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+h1 {
+    text-align: center;
+}
+
+//Container//
+.Container {
+    display: absolute;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2%;
+    border-bottom: 2px solid yellow;
+    border-right: 2px solid yellow;
+}
+
+button {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+
+//Film Title//
+.Title {
+    font-size: 2.5em;
+    font-family: $Dosis;
+    width: 100%;
+    height: auto;
+    animation: 5s shake alternate;
+}
+
+@keyframes shake {
+    0% {
+        transform: skewX(-15deg);
+    }
+    5% {
+        transform: skewX(15deg);
+    }
+    10% {
+        transform: skewX(-15deg);
+    }
+    15% {
+        transform: skewX(15deg);
+    }
+    20% {
+        transform: skewX(0deg);
+    }
+    100% {
+        transform: skewX(0deg);
+    }
+}
+
+.Title:hover {
+    color: yellow;
+    background: rgba(0, 0, 0, 1);
+}
+
+//Modal//
+.modal {
+    position: fixed;
+    @extend %full;
+    background: rgba(0, 0, 0, 1);
+    .modal-main {
+        position: fixed;
+        border: 2px solid white;
+        padding: 2%;
+        width: 80%;
+        height: 100%;
+        @extend %center;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.modal-main {
+    .titleModal {
+        font-size: 3rem;
+        font-family: $Dosis;
+        padding-bottom: 2%;
+        border-bottom: 2px solid white;
+    }
+    .titleCom {
+        color: yellow;
+        font-family: $Jos;
+        font-size: 2em;
+    }
+    h4 {
+        color: white;
+        font-family: $Fira;
+        font-size: 1.7em;
+    }
+    li {
+        font-family: $Jos;
+        font-size: 1.5em;
+    }
+    button {
+        position: absolute;
+        right: 2%;
+        font-size: 1rem;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 2px solid white;
+        font-family: $Dosis;
+    }
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+//scrollbar//
+ ::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+ ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(32, 32, 32, 0.01);
+}
+
+@media screen and (max-width: $break-small) {
+    .Text {
+        font-size: 3em;
+        background-size: 50%;
+    }
+    .Container {
+        width: 80%;
+    }
+    .Title {
+        font-size: 1.5em;
+    }
+    .modal {
+        .modal-main {
+            width: 90%;
+        }
+    }
+}
